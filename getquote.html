@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DESIGN WALKZ</title>
+    <link rel="stylesheet" type="text/css" href="style7.css">
+</head>
+<body>
+
+<h1>Get Quoted</h1>
+<div class="header">
+    <a href="small.mp4" class="play-demo-button" id="play-button">
+        <span class="play-icon">▶</span> Play Demo
+    </a>
+</div>
+
+<video id="demo-video" controls></video>
+
+
+<script>
+    var playButton = document.getElementById("play-button");
+    var video = document.getElementById("demo-video");
+    var backButton = document.getElementById("back-button");
+
+    playButton.addEventListener("click", function(event) {
+        event.preventDefault();
+        var videoSrc = this.getAttribute("href");
+        video.src = videoSrc;
+        video.style.display = "block";
+        backButton.style.display = "block";
+        video.play();
+    });
+
+
+</script>
+<form action="process.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="contact">Contact No:</label>
+    <input type="tel" id="contact" name="contact" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" required><br><br>
+
+    <label for="pincode">Pincode:</label>
+    <input type="text" id="pincode" name="pincode" required><br><br>
+
+    <h2>Purpose</h2>
+    <select name="purpose" required>
+        <option value="designing_and_planning">Designing and Planning</option>
+        <option value="estimation">Estimation</option>
+        <option value="bill_of_quantities">Bill of Quantities</option>
+        <option value="3d_visualisation">3D Visualisation</option>
+        <option value="walkthrough">Walkthrough</option>
+        <option value="walkthrough_vr">Walkthrough (VR)</option>
+        <option value="animation_rendering">Animation Rendering</option>
+    </select><br><br>
+
+    <h2>Type of Project</h2>
+    <select name="project_type" required>
+        <option value="residence">Residence</option>
+        <option value="commercial">Commercial</option>
+        <option value="healthcare">Healthcare</option>
+        <option value="warehouse">Warehouse</option>
+        <option value="industries">Industries</option>
+        <option value="landscape">Landscape</option>
+    </select><br><br>
+
+    <label for="site_location">Site Location:</label>
+    <input type="text" id="site_location" name="site_location" required><br><br>
+
+    <h2>Total Site Area</h2>
+    <select name="site_area" required>
+        <option value="square_meter">Square Meter</option>
+        <option value="sqft">Square Feet</option>
+    </select><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
