@@ -1,0 +1,117 @@
+:root {
+    --primary-color: #07afd9;
+  }
+
+  * {
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  header{
+    width: 100%;
+    height: 70px;
+    position:absolute ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    z-index: 999;
+
+}
+.logo{
+    color:white;
+    text-decoration: none;
+    font-size: 30px;
+}
+.navbar{
+    position: relative;
+}
+.nav-items a{
+    color: white;
+    text-decoration: none;
+    margin-right: 30px;
+}
+.nav-items a:hover{
+    color:#0ef;
+    transition: .55s;
+}
+.icons {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.0rem;
+    margin-left: 2rem;
+}
+
+  body {
+    background-color: #1E2B35;
+    overflow: hidden;
+    margin:0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .radio-tile-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .input-container {
+    position: relative;
+    height: 7rem;
+    width: 7rem;
+    margin: 0.5rem;
+  }
+
+  .input-container input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+  }
+
+  .input-container .radio-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    transition: all 300ms ease;
+  }
+
+  .input-container ion-icon {
+    color: var(--primary-color);
+    font-size: 3rem;
+  }
+
+  .input-container label {
+    color: var(--primary-color);
+    font-size: 0.80rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  input:checked+.radio-tile {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 12px var(--primary-color);
+    transform: scale(1.1);
+  }
+
+  input:hover+.radio-tile {
+    box-shadow: 0 0 12px var(--primary-color);
+  }
+
+  input:checked+.radio-tile ion-icon,
+  input:checked+.radio-tile label {
+    color: white;
+  }
